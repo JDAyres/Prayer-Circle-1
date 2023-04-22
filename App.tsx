@@ -8,7 +8,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Welcome Screen
 function Welcome({navigation}: {navigation: any}) {
   return (
-    <View style={styles.container}>
+    <View style={styles.container1}>
       <View style={styles.header}>
         <Text style={styles.header_text}>Welcome to Prayer Circle</Text>
       </View>
@@ -26,9 +26,12 @@ function Welcome({navigation}: {navigation: any}) {
 // Main Content Screen
 function Content({navigation}: {navigation: any}) {
   return (
-    <View style={styles.container}>
+    <View style={styles.container2}>
       <View style={styles.header}>
-        <Text style={styles.header_text}>Content</Text>
+        <View style={styles.backgroundOverlay}>
+          <Text style={styles.header_text}>Content</Text>
+        </View>
+        <Image style={styles.userImage} source={require('./assets/tBunch.jpg')} />
       </View>
       <View style={styles.footer}>
         <Pressable style={styles.footer_pressable} onPress={() => navigation.goBack()}>
@@ -63,7 +66,7 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  container1: {
     flex: 1,
     backgroundColor: '#2F3E69',
     alignItems: 'center',
@@ -84,6 +87,28 @@ const styles = StyleSheet.create({
     height: 275,
     width: 263
   },
+  userImage: {
+    bottom: 80,
+    left: 220,
+    height: 50,
+    width: 50,
+    borderRadius: 150
+  },
+  backgroundOverlay: {
+    position: 'absolute',
+    top: 20,
+    right: 20,
+    bottom: 20,
+    left: 20,
+    height: 100,
+    width: 100,
+    backgroundColor: '#2A3045',
+    opacity: 0.5,
+    borderRadius: 10,
+  },
+  contentBlock: {
+
+  },
   footer: {
     backgroundColor: "#2B2B2B",
     borderTopLeftRadius: 30,
@@ -103,5 +128,12 @@ const styles = StyleSheet.create({
     fontSize: 50, 
     fontWeight: 'bold',
     padding: 10
-  }
+  },
+  container2: {
+    flex: 1,
+    backgroundColor: '#2B2B2B',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
 });
+
