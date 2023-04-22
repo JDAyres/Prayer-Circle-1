@@ -38,7 +38,7 @@ executors:
       - image: cimg/node:lts
     working_directory: ~/Prayer-Circle
 
-    
+
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
@@ -50,4 +50,4 @@ workflows:
       - eas_build:
           filters:
             branches:
-              only: main
+              only: master
