@@ -32,12 +32,12 @@ function Content({navigation}: {navigation: any}) {
         <Text style={styles.header_text}>Content</Text>  
           <Image style={styles.userImage} source={require('./assets/tBunch.jpg')} />
         </View>
-        <View style={styles.footer}>
-          <Pressable style={styles.footer_pressable} onPress={() => navigation.goBack()}>
-            <Text style={styles.footer_text}>Back</Text>
-          </Pressable>
-        </View>
-        <StatusBar style="auto" />
+        {/* <Image style={styles.userImage} source={require('./assets/tBunch.jpg')} /> */}
+      </View>
+      <View style={styles.footer}>
+        <Pressable style={styles.footer_pressable} onPress={() => navigation.goBack()}>
+          <Text style={styles.footer_text}>Back</Text>
+        </Pressable>
       </View>
     </View>
   );
@@ -123,6 +123,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#2B2B2B',
     alignItems: 'center',
     justifyContent: 'space-between',
-  },
+  }
 });
 
