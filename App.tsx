@@ -11,7 +11,7 @@ function Welcome({navigation}: {navigation: any}) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.header_text}>Welcome to Prayer Circle</Text>
+        <Text style={styles.header_text}>Welcome to Prayer Circle!</Text>
       </View>
       <Image style={styles.logo} source={require('./assets/logo/Dark_Logo.png')} />
       <View style={styles.footer}>
