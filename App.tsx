@@ -31,7 +31,7 @@ function Content({navigation}: {navigation: any}) {
         <View style={styles.backgroundOverlay}>
           <Text style={styles.header_text}>Content</Text>
         </View>
-        <Image style={styles.userImage} source={require('./assets/tBunch.jpg')} />
+        {/* <Image style={styles.userImage} source={require('./assets/tBunch.jpg')} /> */}
       </View>
       <View style={styles.footer}>
         <Pressable style={styles.footer_pressable} onPress={() => navigation.goBack()}>
@@ -89,25 +89,14 @@ const styles = StyleSheet.create({
   },
   userImage: {
     bottom: 80,
-    left: 220,
+    left: 235,
     height: 50,
     width: 50,
     borderRadius: 150
   },
   backgroundOverlay: {
-    position: 'absolute',
-    top: 20,
-    right: 20,
-    bottom: 20,
-    left: 20,
-    height: 100,
-    width: 100,
     backgroundColor: '#2A3045',
-    opacity: 0.5,
     borderRadius: 10,
-  },
-  contentBlock: {
-
   },
   footer: {
     backgroundColor: "#2B2B2B",
@@ -134,6 +123,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#2B2B2B',
     alignItems: 'center',
     justifyContent: 'space-between',
-  },
+  }
 });
 
