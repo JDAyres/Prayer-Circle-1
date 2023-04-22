@@ -48,7 +48,7 @@ jobs:
           command: npx eas-cli build --platform android --non-interactive
 
 workflows:
-  build_app:
+  build_app_workflow:
     jobs:
       - eas_build:
           filters:
